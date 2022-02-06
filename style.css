@@ -6,6 +6,9 @@
     --shadow-2: 0 .5rem 1rem rgba(0,0,0,.15);
     --shadow-3: 0 1rem 3rem rgba(0,0,0,.175);
 }
+body{
+    background: #e9e9e9;
+}
 *{
     margin: 0;
     padding: 0;
@@ -103,6 +106,7 @@ button{
     box-shadow: var(--shadow-1);
 }
 
+
 /* main alert */
 .tohi_alert{
     position: fixed;
@@ -153,4 +157,42 @@ button{
 .tohi_alert .alert_content .alert_footer a:nth-child(2){
     background: #2374e1;
     color: white;
+}
+
+
+/* accordion */
+.tohi_accordion{
+    width: 40%;
+    margin: 10rem auto;
+}
+.tohi_accordion .accordion_item{
+    background: white;
+    margin: 22px 0px;
+    padding: 12px 32px;
+    border-radius: 6px;
+    box-shadow: var(--shadow-2);
+}
+.tohi_accordion .accordion_item .accordion_head{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    cursor: pointer;
+    align-items: center;
+}
+.tohi_accordion .accordion_item .accordion_head i{
+    transform: rotate(0deg);
+    transition: .5s;
+}
+.tohi_accordion .accordion_item .accordion_head.active i{
+    transform: rotate(90deg);
+}
+.tohi_accordion .accordion_item .accordion_body{
+    height: 0px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+.tohi_accordion .accordion_item .accordion_body p{
+    border-top: 1px solid #e9e9e9;
+    padding: 10px 0px;
 }

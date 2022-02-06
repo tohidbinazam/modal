@@ -52,3 +52,28 @@ discard.addEventListener('click', function(){
     tohi_modal.classList.remove('active');
     modal_content.classList.remove('active');
 })
+
+
+// accordion get item
+const accordion_head = document.querySelectorAll('.accordion_head');
+
+accordion_head.forEach(item => {
+
+    item.addEventListener('click', function(){
+
+        accordion_head.forEach(data => {
+            if( data != this){
+                data.classList.remove('active');
+                data.nextElementSibling.style.height = '0px'
+            }
+            
+        })
+
+        item.classList.toggle('active');
+        if(item.classList.contains('active')){
+            item.nextElementSibling.style.height = item.nextElementSibling.scrollHeight + 'px'
+        }else{
+            item.nextElementSibling.style.height = '0px'
+        }
+    })
+});
