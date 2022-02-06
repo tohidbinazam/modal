@@ -9,7 +9,8 @@ const editing = document.getElementById('editing');
 const discard = document.getElementById('discard');
 
 
-main_btn.addEventListener('click', function(){
+main_btn.addEventListener('click', function(e){
+    e.preventDefault();
 
     tohi_modal.classList.add('active');
     modal_content.classList.add('active');
